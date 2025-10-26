@@ -2,9 +2,9 @@
 
 
 %% input
-InputDirectory = 'F:\04-Apr\3 - Colloidal memory\3D DEP trapping\0.5V 100 kHz';
-
-load([InputDirectory '\' 'trackResults.mat']);
+% InputDirectory = 'F:\04-Apr\3 - Colloidal memory\3D DEP trapping\0.5V 100 kHz';
+% 
+% load([InputDirectory '\' 'trackResults.mat']);
 
 TrackedData = trackRes.traces;
 
