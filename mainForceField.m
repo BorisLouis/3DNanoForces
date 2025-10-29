@@ -77,7 +77,7 @@ for i=1:size(traces2Keep,1)
     y = track.row;
     z = track.z;
     %plot(track.z(2:end),ax+ay+az)
-    FullPos = [FullPos; [ax,ay,az , x(2:end), y(2:end),z(2:end)]];
+    FullPos = [FullPos; [ax,ay,az , x(1:end-1)+diff(x)/2, y(1:end-1)+diff(y)/2,z(1:end-1)+diff(z)/2]];
     
 end
 
