@@ -10,7 +10,7 @@ sizeParticles = 500; % diameter in nm
 frameRate = 100;
 trailing = 20; %frame the traces stays in the movie
 
-perc = 0.5;%proportion of traces to plot
+perc = 1;%proportion of traces to plot
 
 %% Top View with time color-coding (4D plot)
 CM = zeros(size(trackRes.traces,1),3);
@@ -44,10 +44,13 @@ xlabel('Position (nm)')
 ylabel('Position (nm)')
 zlabel('Position (nm)')
 axis image
-ylim(xlim+10^4)
+xlim([16500-6900,16500+6900])
+ylim([24150-6900,24150+6900])
 view(2)
 box on
 set(gcf,'color','w')
+caxis([0 0.8])
+
 
 %% %% Top View with time color-coding (4D plot)
 CM = [24800 15460];

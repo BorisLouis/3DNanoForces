@@ -91,15 +91,14 @@ ylabel('Position (nm)')
 zlabel('Position (nm)')
 axis image
 
-
 %% plot specific trace
 
-id = 9122;
+id = 18006;
 
 %%
 figure (1)
 clf
-id = 19969;
+id = 27862;
 subplot(1,2,1)
 imagesc(histogram3D(:,:,end))
 hold on
@@ -116,7 +115,7 @@ zPlot   = currTrace.z;
 tPlot   = (currTrace.t-currTrace.t(1))*expTime;
 %pl = plot(colPlot,rowPlot,'r');
 %plot with time color coding
-patch([colPlot(:)' nan],[rowPlot(:)' nan],[zPlot(:)' nan],[tPlot(:)' nan],'EdgeColor','interp','FaceColor','none')
+patch([colPlot(:)' nan],[rowPlot(:)' nan],[zPlot(:)' nan],[tPlot(:)' nan],'Linewidth',1.5,'EdgeColor','interp','FaceColor','none')
 axis image
 box on 
 colorbar
@@ -124,7 +123,7 @@ view(3)
 
 figure(2)
 clf
-patch([colPlot(:)' nan],[rowPlot(:)' nan],[zPlot(:)' nan],[tPlot(:)' nan],'EdgeColor','interp','FaceColor','none')
+patch([colPlot(:)' nan],[rowPlot(:)' nan],[zPlot(:)' nan],[tPlot(:)' nan],'Linewidth',1.5,'EdgeColor','interp','FaceColor','none')
 axis image
 box on 
 colorbar
@@ -147,17 +146,17 @@ view(3)
 
 %% plot traces on top of electrodes for SI
 %id1 ejection perpendicular
-list.id1 = [83,8550, 2886,17014,15429,3650,11446, 23885, 6227, 6909,19969];
+list.id1 = [];
 %id2 Trapping event
-list.id2 = [26606,967, 31037, 14425, 24326,31246, 31073];
+list.id2 = [];
 % id 3 trapped
-list.id3 = [9688,11764,3340,11267];
+list.id3 = [];
 % id 4 vortex
-list.id4 = [11790, 22763,15870, 6160, 22763, 25952,9323]; 
+list.id4 = []; 
 %id5 Brownian
-list.id5 = [11801, 16002];
+list.id5 = [];
 %id6 = 45 degrees
-list.id6 = [32210, 21668,30453,22930,30577,2244,2496,7167,9683,16738 ];
+list.id6 = [ ];
 
 col = [0.3010 0.7450 0.9330;
     0.8500 0.3250 0.0980;
@@ -186,4 +185,32 @@ end
 axis image
 xlim([1 159])
 ylim([1 250])
+
+
+%% Selected particles
+figure
+hold on
+imagesc(histogram3D(:,:,end))
+axis image
+hold on
+
+currTrace = trackRes.traces{27862,1};
+colPlot = currTrace.col/200;
+rowPlot = currTrace.row/200;
+plot(colPlot,rowPlot);
+
+currTrace = trackRes.traces{22988,1};
+colPlot = currTrace.col/200;
+rowPlot = currTrace.row/200;
+plot(colPlot,rowPlot);
+
+currTrace = trackRes.traces{8844,1};
+colPlot = currTrace.col/200;
+rowPlot = currTrace.row/200;
+plot(colPlot,rowPlot);
+
+currTrace = trackRes.traces{19996,1};
+colPlot = currTrace.col/200;
+rowPlot = currTrace.row/200;
+plot(colPlot,rowPlot);
 

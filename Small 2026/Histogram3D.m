@@ -53,6 +53,15 @@ for i = 1:size(histogram3D,3)
     clf
 
 end
+%%
+figure
+imagesc(histogram3D(:,:,end))
+axis image
+clim([0.5 50])
+title([num2str(edgesZ(i)) '-' num2str(edgesZ(i+1)) '\nm'])
+xlim([(16500-6900)/200,(16500+6900)/200]) %15600pDEP 24300PDEP
+ylim([(24150-6900)/200,(24150+6900)/200])
+colormap('parula')
 
 %%
 if cleanUpStillParticles

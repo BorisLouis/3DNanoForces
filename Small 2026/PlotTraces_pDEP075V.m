@@ -10,7 +10,7 @@ sizeParticles = 500; % diameter in nm
 frameRate = 100;
 trailing = 20; %frame the traces stays in the movie
 
-perc = 0.4;%proportion of traces to plot
+perc = 0.7;%proportion of traces to plot
 
 %% Top View with time color-coding (4D plot)
 CM = zeros(size(trackRes.traces,1),3);
@@ -30,7 +30,7 @@ for i = 1:size(trackRes.traces,1)
         tPlot   = tPlot/(max(tPlot));
         plot3(colPlot,rowPlot,zPlot)
         %plot with time color coding
-        patch([colPlot(:)' nan],[rowPlot(:)' nan],[zPlot(:)' nan],[tPlot(:)' nan],'EdgeColor','interp','FaceColor','none')
+        patch([colPlot(:)' nan],[rowPlot(:)' nan],[zPlot(:)' nan],[tPlot(:)' nan],'linewidth',1,'EdgeColor','interp','FaceColor','none')
 
     end        
     CM(i,:) = [mean(currTrace.row),mean(currTrace.col),mean(currTrace.z)];
@@ -44,10 +44,12 @@ xlabel('Position (nm)')
 ylabel('Position (nm)')
 zlabel('Position (nm)')
 axis image
-ylim(xlim+10^4)
+% xlim([15900-6900,15900+6900])
+% ylim([24100-6900,24100+6900])
 view(2)
 box on
 set(gcf,'color','w')
+caxis([0 0.8])
 
 %% %% Top View with time color-coding (4D plot)
 CM = [24600 15770];

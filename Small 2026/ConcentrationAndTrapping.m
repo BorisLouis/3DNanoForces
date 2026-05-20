@@ -1,13 +1,13 @@
 %% User Input
 clear; clc;
-Data = 'F:\WoutVT\20251003_trapping_statisics_BE_only_2 (1 MHz 2V)\200nm_PS_1MHz_2V';
-folderControl = 'F:\WoutVT\20251003_trapping_statisics_BE_only_2 (1 MHz 2V)\200nm_PS_1MHz_Diffusion';
+Data = 'G:\7-11-2025 Trapping BE Only\200nm CPS 0.1mM KCl\Sample 2- highV';
+folderControl = 'G:\7-11-2025 Trapping BE Only\200nm CPS 0.1mM KCl\Sample 2 0V';
 
 %Move parameters here
 
 expTime = 0.01; %exposure time in seconds
-zcond=1700;
-minpoints=10;
+zcond=800;
+minpoints=4;
 %% get folder
 C0 = dir(folderControl);
 
@@ -161,7 +161,7 @@ for i=1:length(trackRes.traces)
         %convert trace XY position to indices so we can compare it with our
         %mask of trapping site and know which traces landed in a trapping
         %site
-        currInds = [floor((currCol)/binX)-1,floor((currRow)/binY)-1];
+        currInds = [ceil((currCol)/binX),ceil((currRow)/binY)];
     
         inds = sub2ind(size(Mask),currInds(:,2),currInds(:,1));
     
@@ -265,7 +265,7 @@ figure
 histogram(vecSpeed,100)
 
 %% vector plot
-threshold =50;
+threshold =70;
 filterPos =FullPos; %sum of XYZ should be >100
 filterPos(sum(abs(filterPos(:,1:3)),2)<threshold,:)=[];
 
