@@ -1,0 +1,111 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software, please cite the repository and the
+  publication associated with the scripts you use. The references
+  below correspond to the ACS Nano 2023 and Small 2026 analyses.
+type: software
+title: "3DNanoForces"
+authors:
+  - family-names: "Louis"
+    given-names: "Boris"
+repository-code: "https://github.com/BorisLouis/3DNanoForces"
+
+# Uncomment and fill these when available:
+# version: "1.0.0"
+# date-released: "YYYY-MM-DD"
+# doi: "YOUR ZENODO DOI"
+
+references:
+  - type: article
+    title: >-
+      Unravelling 3D Dynamics and Hydrodynamics during Incorporation
+      of Dielectric Particles to an Optical Trapping Site
+    authors:
+      - family-names: "Louis"
+        given-names: "Boris"
+      - family-names: "Huang"
+        given-names: "Chih-Hao"
+      - family-names: "Camacho"
+        given-names: "Rafael"
+      - family-names: "Scheblykin"
+        given-names: "Ivan G."
+      - family-names: "Sugiyama"
+        given-names: "Teruki"
+      - family-names: "Kudo"
+        given-names: "Tetsuhiro"
+      - family-names: "Melendez"
+        given-names: "Marc"
+      - family-names: "Delgado-Buscalioni"
+        given-names: "Rafael"
+      - family-names: "Masuhara"
+        given-names: "Hiroshi"
+      - family-names: "Hofkens"
+        given-names: "Johan"
+      - family-names: "Bresolí-Obach"
+        given-names: "Roger"
+    journal: "ACS Nano"
+    volume: "17"
+    issue: "4"
+    start: "3797"
+    end: "3808"
+    year: 2023
+    doi: "10.1021/acsnano.2c11753"
+
+  - type: article
+    title: >-
+      Three-Dimensional Optical and Computational Reconstruction
+      of Colloidal Electrokinetic Flows via Multiplane Imaging
+      and Multiscale Modeling
+    authors:
+      - family-names: "de Jong"
+        given-names: "Flip"
+      - family-names: "Diez-Silva"
+        given-names: "Pablo"
+      - family-names: "Chen"
+        given-names: "Jui-Kai"
+      - family-names: "Peláez"
+        given-names: "Raúl P."
+      - family-names: "Seth"
+        given-names: "Sudipta"
+      - family-names: "Shih"
+        given-names: "Bing-Yang"
+      - family-names: "Fransen"
+        given-names: "Senne"
+      - family-names: "Tahvildari"
+        given-names: "Radin"
+      - family-names: "Trivedi"
+        given-names: "Kruti"
+      - family-names: "Pelletier"
+        given-names: "Rémi"
+      - family-names: "Balakrishnan"
+        given-names: "Harishankar"
+      - family-names: "Hervés-Carrete"
+        given-names: "Carmen"
+      - family-names: "Renero-Lecuna"
+        given-names: "Carlos"
+      - family-names: "Van Roy"
+        given-names: "Willem"
+      - family-names: "Rosmeulen"
+        given-names: "Maarten"
+      - family-names: "Nonell"
+        given-names: "Santi"
+      - family-names: "Rocha"
+        given-names: "Susana"
+      - family-names: "Klymchenko"
+        given-names: "Andrey"
+      - family-names: "Liz-Marzán"
+        given-names: "Luis M."
+      - family-names: "Bresolí-Obach"
+        given-names: "Roger"
+      - family-names: "Marqués"
+        given-names: "Manuel I."
+      - family-names: "Hofkens"
+        given-names: "Johan"
+      - family-names: "Delgado Buscalioni"
+        given-names: "Rafael"
+      - family-names: "Louis"
+        given-names: "Boris"
+    journal: "Small"
+    article-number: "e75129"
+    year: 2026
+    doi: "10.1002/smll.75129"
